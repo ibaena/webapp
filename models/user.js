@@ -40,9 +40,4 @@ var Users = sequelize.define('user', {
   },
 });
 
-//This will create database table if one does not exist already
-/*sequelize.sync({
-  //logging: console.log
-});*/
-
 module.exports = Users;

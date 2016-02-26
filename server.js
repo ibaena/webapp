@@ -38,7 +38,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-var PORT = process.env.NODE_ENV || 8000;
+var PORT = process.env.NODE_ENV || 3000;
 connection.sync().then(function() {
   app.listen(PORT, function() {
     console.log("Listening on port: %s", PORT);
