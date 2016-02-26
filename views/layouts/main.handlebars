@@ -1,19 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.15/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="public/stylesheets/index.css">
+  <title></title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- Left side -->
+      <div class="header-left">
+        <p class="subtitle is-5">
+          <strong>Social Posts</strong>
+        </p>
+      </div>
+
+      <!-- Hamburger menu (on mobile) -->
+      <span class="header-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+      </span>
+
+      <!-- Right side -->
+      <div class="header-right header-menu">
+        <span class="header-item">
+        <!--login/password start-->
+        <p class="control">
+          <input class="input" type="text" placeholder="Email">
+        </p>
+      </span>
+        <span class="header-item">
+        <p class="control">
+          <input class="input" type="password" placeholder="Password">
+        </p>
+      </span>
+        <span class="header-item">
+        <p class="control">
+          <a class="button" type="submit">Login</a>
+        </p>
+      </span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    {{{body}}}
 
 
-{{{body}}}
 
+    <footer class="footer">
+      <div class="container">
+        <div class="content is-centered">
+          © 2016 Ivan Baena
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
 
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="public/javascripts/main.js"></script>
 
-  </body>
-
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-  <script src="semantic/dist/semantic.min.js"></script>
 </html>

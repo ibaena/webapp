@@ -1,0 +1,10 @@
+#spacer{
+  height: 50px;
+  max-width: 100%
+}
+
+.front {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
