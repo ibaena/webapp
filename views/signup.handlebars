@@ -36,15 +36,15 @@
 </div>
 
   <div class="column">
-    <h4 class="title">Register now its easy!</h4>
-    <form>
+    <h4 class="title confirm">Register now its easy!</h4>
+    <form action="/signup" method="post">
       <p class="control">
         <label class="label">First Name</label>
-        <input class="input" type="text" required="required" placeholder="First Name" name="fname">
+        <input class="input" type="text" required="required" placeholder="First Name" name="firstname">
       </p>
       <p class="control">
         <label class="label">Last Name</label>
-        <input class="input" type="text" required="required" placeholder="Last Name" name="lname">
+        <input class="input" type="text" required="required" placeholder="Last Name" name="lastname">
       </p>
       <p class="control">
         <label class="label">Email</label>
@@ -54,20 +54,12 @@
         <label class="label">Password</label>
         <input class="input" type="password" required="required" placeholder="Password" name="password">
       </p>
-      <div class="control">
-        <label class="label">Gender</label>
-        <span class="select">
-          <select>
-            <option>Male</option>
-            <option>Female</option>
-          </select>
-        </span>
-      </div>
       <p class="control">
         <button class="button  is-inverted" id="login-submit">
           Login
         </button>
       </p>
     </form>
+    <a href="/login">Already a have an account login here!</a>
   </div>
 </div>

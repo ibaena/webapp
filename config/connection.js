@@ -2,7 +2,7 @@ var mysql = require("mysql");
 var Sequelize = require('sequelize');
 
 
-var sequelize = new Sequelize('account', 'root', '@pril2488', {
+var sequelize = new Sequelize('socialdb', 'root', '@pril2488', {
   host: 'localhost',
   dialect: 'mysql',
 

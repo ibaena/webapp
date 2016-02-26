@@ -5,7 +5,11 @@ var session = require('express-session');
 var Sequelize = require('sequelize');
 var bcrypt = require('bcryptjs');
 var mysql = require('mysql');
+var passport = require('passport');
+var flash = require('connect-flash');
 var connection = require('./config/connection');
+
+
 
 var app = express();
 
@@ -19,7 +23,6 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use('/node_modules', express.static(__dirname + "/node_modules"));
-app.use('/semantic', express.static(__dirname + "/semantic"));
 
 app.use('/public', express.static(__dirname + "/public"));
 app.use(session({
@@ -31,6 +34,10 @@ app.use(session({
   resave: false
 }));
 
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
 var PORT = process.env.NODE_ENV || 8000;
 connection.sync().then(function() {
   app.listen(PORT, function() {
@@ -38,16 +45,6 @@ connection.sync().then(function() {
   });
 });
 
-
-app.get('/',function(req, res){
-  res .render('index',{
-    title: 'My Page'
-  });
-});
-
-app.get('/welcome',function(req, res){
-  res .render('welcome',{
-    title: 'Hi There!',
-    data: 'active'
-  });
-});
+//routes
+var routes = require('./controllers/router.js');
+app.use('/', routes);
